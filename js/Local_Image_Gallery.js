@@ -1,1 +1,349 @@
-const _0x23c43b=_0x15ed;function _0x2b37(){const _0x53b3de=['9485077AmVaiG','className','发送数据到后端时出错:','onNodeCreated','contains','items','forEach','textContent','<div\x20class=\x22video-card-overlay\x22>','change','clientY','addDOMWidget','addEventListener','.gallery-card[data-type=\x27image\x27],\x20.gallery-card[data-type=\x27video\x27],\x20.gallery-card[data-type=\x27audio\x27]','type','min','findIndex','Escape','<p>请输入文件夹路径并点击\x20\x27刷新\x27。<br>Enter\x20folder\x20path\x20and\x20click\x20\x27Refresh\x27.</p>','querySelectorAll','\x20.dir-card\x20.dir-icon,\x20#','scrollTop','\x20.lightbox-close\x20{\x20position:\x20absolute;\x20top:\x2015px;\x20right:\x2020px;\x20width:\x2035px;\x20height:\x2035px;\x20background-color:\x20rgba(0,0,0,0.5);\x20color:\x20#fff;\x20border-radius:\x2050%;\x20border:\x202px\x20solid\x20#fff;\x20font-size:\x2024px;\x20line-height:\x2030px;\x20text-align:\x20center;\x20cursor:\x20pointer;\x20z-index:\x2010002;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20#','\x20.local-gallery-controls\x20{\x20display:\x20flex;\x20flex-wrap:\x20wrap;\x20gap:\x2010px;\x20margin-bottom:\x2010px;\x20align-items:\x20center;\x20flex-shrink:\x200;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#','\x20.gallery-card\x20video\x20{\x20width:\x20100%;\x20height:\x20auto;\x20border-radius:\x205px;\x20display:\x20block;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#','.lightbox-close','querySelector','.lightbox-prev','44217437uwxvny','.selected','classList','\x20.local-gallery-controls\x20select,\x20#','\x20.local-gallery-controls\x20input[type=text]\x20{\x20flex-grow:\x201;\x20min-width:\x20150px;}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#','target','click','<p\x20style=\x22color:red;\x22>错误:\x20','ArrowLeft','\x20.local-gallery-controls\x20button\x20{\x20cursor:\x20pointer;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#','video','Enter','20uBJKsH','<svg\x20viewBox=\x220\x200\x201024\x201024\x22\x20version=\x221.1\x22\x20xmlns=\x22http://www.w3.org/2000/svg\x22\x20width=\x22100%\x22\x20height=\x22100%\x22><path\x20d=\x22M768\x20256H256c-35.3\x200-64\x2028.7-64\x2064v384c0\x2035.3\x2028.7\x2064\x2064\x2064h512c35.3\x200\x2064-28.7\x2064-64V320c0-35.3-28.7-64-64-64zM512\x20665.6c-84.8\x200-153.6-68.8-153.6-153.6S427.2\x20358.4\x20512\x20358.4s153.6\x2068.8\x20153.6\x20153.6-68.8\x20153.6-153.6\x20153.6z\x22\x20fill=\x22#A9DFBF\x22></path><path\x20d=\x22M512\x20409.6c-56.5\x200-102.4\x2045.9-102.4\x20102.4s45.9\x20102.4\x20102.4\x20102.4\x20102.4-45.9\x20102.4-102.4-45.9-102.4-102.4-102.4z\x22\x20fill=\x22#A9DFBF\x22></path></svg>','<p>正在加载...</p>','.local-gallery-container-wrapper','.refresh-button','json','innerHTML','onloadeddata','<p>文件夹为空。<br>The\x20folder\x20is\x20empty.</p>','img','</div><div\x20class=\x22dir-name\x22>','head','select','\x20.lightbox-next:hover\x20{\x20background-color:\x20rgba(0,0,0,0.7);\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20#','div','pause','</div>','beforeend','add','stringify','674449GgdFQx','image','&sort_order=','size','onscroll','createElement','/local_image_gallery/thumbnail?filepath=','flex','opacity','getElementById','\x20.dir-card,\x20#','style','local-gallery-','title','registerExtension','total_pages','<svg\x20viewBox=\x220\x200\x201024\x201024\x22\x20version=\x221.1\x22\x20xmlns=\x22http://www.w3.org/2000/svg\x22\x20width=\x22100%\x22\x20height=\x22100%\x22><path\x20d=\x22M928\x20320H488L416\x20232c-15.1-18.9-38.3-29.9-63.1-29.9H128c-35.3\x200-64\x2028.7-64\x2064v512c0\x2035.3\x2028.7\x2064\x2064\x2064h800c35.3\x200\x2064-28.7\x2064-64V384c0-35.3-28.7-64-64-64z\x22\x20fill=\x22#F4D03F\x22></path></svg>','\x20.audio-card\x20.audio-icon\x20{\x20width:\x2060%;\x20height:\x2060%;\x20margin-bottom:\x208px;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#','\x20.local-gallery-controls\x20input,\x20#','preventDefault','&show_audio=','name','</div><div\x20class=\x22audio-name\x22>','mouseup','appendChild','indexOf','dataset','substring','.gallery-card','dblclick','\x20img.panning\x20{\x20cursor:\x20grabbing;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20#','463164JAAKUx','disabled','\x20.image-cardholder::-webkit-scrollbar-track\x20{\x20background:\x20#2a2a2a;\x20border-radius:\x204px;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#','\x20.audio-card:hover\x20{\x20background-color:\x20#444;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#','\x20.lightbox-next\x20{\x20right:\x2015px;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20#','&show_videos=','\x20.dir-card:hover,\x20#','/local_image_gallery/images?directory=','length','.sort-by','\x20.image-cardholder::-webkit-scrollbar\x20{\x20width:\x208px;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#','clientX','\x20.audio-card\x20{\x20background-color:\x20#333;\x20padding:\x2010px;\x20display:\x20flex;\x20flex-direction:\x20column;\x20align-items:\x20center;\x20justify-content:\x20center;\x20text-align:\x20center;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#','\x20.lightbox-prev:hover,\x20#','LocalImageGalleryNode','/local_image_gallery/get_last_path','fill','width','audio','prototype','src','Comfy.LocalImageGallery','.image-cardholder','last_path','dir-card','10PzcVXh','104BxIHqi','HTTP\x20error!\x20status:\x20','2DrRsHS','application/json','checked','audio-card','input[type=\x27text\x27]','.up-button','block','assign','global-image-lightbox','\x20.gallery-card\x20{\x20position:\x20absolute;\x20border:\x203px\x20solid\x20transparent;\x20border-radius:\x208px;\x20box-sizing:\x20border-box;\x20transition:\x20border-color\x200.2s\x20ease-in-out,\x20top\x200.3s\x20ease,\x20left\x200.3s\x20ease;\x20cursor:\x20pointer;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#','\x20.audio-card\x20.audio-name\x20{\x20font-size:\x2012px;\x20word-break:\x20break-all;\x20user-select:\x20none;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#','\x20.gallery-card.selected\x20{\x20border-color:\x20#00FFC9;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#','none','\x20.video-card-overlay\x20{\x20position:\x20absolute;\x20top:\x205px;\x20left:\x205px;\x20width:\x2024px;\x20height:\x2024px;\x20opacity:\x200.8;\x20pointer-events:\x20none;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#','onclick','&page=','\x20.local-gallery-controls\x20label\x20{\x20margin-left:\x205px;\x20font-size:\x2012px;\x20white-space:\x20nowrap;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22','1204263tGzSVx','key','translate(','map','ArrowRight','selected','clientWidth','height','current_directory','/local_image_gallery/view?filepath=','#t=0.1','\x20.gallery-card\x20img,\x20#','\x20img\x20{\x20cursor:\x20grab;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20#','\x20.gallery-card\x20*:hover\x20{\x20filter:\x20brightness(1.2);\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#','mousedown','left','display','\x20.lightbox-next\x20{\x20position:\x20absolute;\x20top:\x2050%;\x20transform:\x20translateY(-50%);\x20width:\x2045px;\x20height:\x2060px;\x20background-color:\x20rgba(0,0,0,0.4);\x20color:\x20#fff;\x20border:\x20none;\x20font-size:\x2030px;\x20cursor:\x20pointer;\x20z-index:\x2010001;\x20transition:\x20background-color\x200.2s;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20#','\x20img,\x20#','&sort_by=','message','POST','\x20{\x20position:\x20fixed;\x20top:\x200;\x20left:\x200;\x20width:\x20100%;\x20height:\x20100%;\x20background-color:\x20rgba(0,\x200,\x200,\x200.85);\x20display:\x20none;\x20align-items:\x20center;\x20justify-content:\x20center;\x20z-index:\x2010000;\x20box-sizing:\x20border-box;\x20-webkit-user-select:\x20none;\x20user-select:\x20none;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20#','includes','status','px,\x20','parent_directory','value','\x20.image-cardholder::-webkit-scrollbar-thumb\x20{\x20background-color:\x20#555;\x20border-radius:\x204px;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</style>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22local-gallery-container-wrapper\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22local-gallery-controls\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22up-button\x22\x20title=\x22返回上级目录(Return\x20to\x20the\x20previous\x20directory)\x22\x20disabled>⬆️\x20上一级(Up)</button>\x20<label>路径(Path):</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20placeholder=\x22输入媒体文件夹的完整路径\x20Enter\x20full\x20path\x20to\x20media\x20folder\x22>\x20<button\x20class=\x22refresh-button\x22>🔄\x20刷新(Refresh)</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22local-gallery-controls\x22\x20style=\x22gap:\x205px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>排序(Sort\x20by):</label>\x20<select\x20class=\x22sort-by\x22>\x20<option\x20value=\x22name\x22>名称-Name</option>\x20<option\x20value=\x22date\x22>日期-Date</option>\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>顺序(Order):</label>\x20<select\x20class=\x22sort-order\x22>\x20<option\x20value=\x22asc\x22>递增-Ascending</option>\x20<option\x20value=\x22desc\x22>递减-Descending</option>\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22margin-left:\x20auto;\x20display:\x20flex;\x20align-items:\x20center;\x20gap:\x205px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>显示视频(Show\x20Videos):</label>\x20<input\x20type=\x22checkbox\x22\x20class=\x22show-videos\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>显示音频(Show\x20Audio):</label>\x20<input\x20type=\x22checkbox\x22\x20class=\x22show-audio\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22image-cardholder\x22><p>请输入文件夹路径并点击\x20\x27刷新\x27。<br>Enter\x20folder\x20path\x20and\x20click\x20\x27Refresh\x27.</p></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','floor','.sort-order','error','closest','\x20video\x20{\x20max-width:\x2095%;\x20max-height:\x2095%;\x20object-fit:\x20contain;\x20transition:\x20transform\x200.1s\x20ease-out;\x20transform:\x20scale(1)\x20translate(0,\x200);\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20#','fetchApi','\x20.local-gallery-container-wrapper\x20{\x20width:\x20100%;\x20font-family:\x20sans-serif;\x20color:\x20#ccc;\x20box-sizing:\x20border-box;\x20display:\x20flex;\x20flex-direction:\x20column;\x20height:\x20100%;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#','deltaY','<div\x20class=\x22dir-icon\x22>','scrollHeight','offsetHeight','.show-videos','body','top','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<style>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#','max','px)\x20scale(','</p>','\x20.local-gallery-controls\x20button:disabled\x20{\x20background-color:\x20#222;\x20cursor:\x20not-allowed;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#','toString','2882106UDaTWD','<div\x20class=\x22audio-icon\x22>','\x20.lightbox-prev,\x20#','loading','apply','observe','/local_image_gallery/set_image_path','1384662mOduqT','path','from'];_0x2b37=function(){return _0x53b3de;};return _0x2b37();}(function(_0xf66554,_0x1350e1){const _0x495657=_0x15ed,_0x568abd=_0xf66554();while(!![]){try{const _0x34155a=-parseInt(_0x495657(0x187))/0x1*(-parseInt(_0x495657(0xfe))/0x2)+-parseInt(_0x495657(0x141))/0x3+parseInt(_0x495657(0xe2))/0x4*(parseInt(_0x495657(0x173))/0x5)+-parseInt(_0x495657(0x148))/0x6+-parseInt(_0x495657(0x14b))/0x7+-parseInt(_0x495657(0xfc))/0x8*(parseInt(_0x495657(0x110))/0x9)+parseInt(_0x495657(0xfb))/0xa*(parseInt(_0x495657(0x167))/0xb);if(_0x34155a===_0x1350e1)break;else _0x568abd['push'](_0x568abd['shift']());}catch(_0x1b938e){_0x568abd['push'](_0x568abd['shift']());}}}(_0x2b37,0xd4be7));function _0x15ed(_0x3c7874,_0x4d5ff3){const _0x2b3718=_0x2b37();return _0x15ed=function(_0x15ede2,_0x12a5e1){_0x15ede2=_0x15ede2-0xcd;let _0x5d0359=_0x2b3718[_0x15ede2];return _0x5d0359;},_0x15ed(_0x3c7874,_0x4d5ff3);}import{app}from'/scripts/app.js';import{api}from'/scripts/api.js';function setupGlobalLightbox(){const _0x2ac65b=_0x15ed;if(document[_0x2ac65b(0x190)](_0x2ac65b(0x106)))return;const _0x4e8824=_0x2ac65b(0x106),_0x56874f=_0x2ac65b(0x10f)+_0x4e8824+'\x22\x20class=\x22lightbox-overlay\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22lightbox-close\x22>&times;</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22lightbox-prev\x22>&lt;</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22lightbox-next\x22>&gt;</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22lightbox-content\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22\x22\x20alt=\x22Preview\x22\x20style=\x22display:\x20none;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<video\x20src=\x22\x22\x20controls\x20autoplay\x20style=\x22display:\x20none;\x22></video>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<audio\x20src=\x22\x22\x20controls\x20autoplay\x20style=\x22display:\x20none;\x22></audio>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20',_0x4355f2='\x0a\x20\x20\x20\x20\x20\x20\x20\x20#'+_0x4e8824+_0x2ac65b(0x126)+_0x4e8824+'\x20.lightbox-content\x20{\x20position:\x20relative;\x20width:\x20100%;\x20height:\x20100%;\x20display:\x20flex;\x20align-items:\x20center;\x20justify-content:\x20center;\x20overflow:\x20hidden;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20#'+_0x4e8824+_0x2ac65b(0x122)+_0x4e8824+_0x2ac65b(0x131)+_0x4e8824+'\x20audio\x20{\x20width:\x2080%;\x20max-width:\x20600px;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20#'+_0x4e8824+_0x2ac65b(0x11c)+_0x4e8824+_0x2ac65b(0xe1)+_0x4e8824+_0x2ac65b(0x161)+_0x4e8824+_0x2ac65b(0x143)+_0x4e8824+_0x2ac65b(0x121)+_0x4e8824+_0x2ac65b(0xef)+_0x4e8824+_0x2ac65b(0x180)+_0x4e8824+'\x20.lightbox-prev\x20{\x20left:\x2015px;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20#'+_0x4e8824+_0x2ac65b(0xe6)+_0x4e8824+'\x20[disabled]\x20{\x20display:\x20none;\x20}\x0a\x20\x20\x20\x20';document[_0x2ac65b(0x139)]['insertAdjacentHTML'](_0x2ac65b(0x184),_0x56874f);const _0x246a79=document[_0x2ac65b(0x18c)](_0x2ac65b(0xce));_0x246a79[_0x2ac65b(0x152)]=_0x4355f2,document[_0x2ac65b(0x17e)]['appendChild'](_0x246a79);}setupGlobalLightbox(),app[_0x23c43b(0xd1)]({'name':_0x23c43b(0xf7),async 'beforeRegisterNodeDef'(_0x28cb59,_0x1b8b39,_0x1b3349){const _0x564eec=_0x23c43b;if(_0x1b8b39[_0x564eec(0xd8)]===_0x564eec(0xf0)){const _0x42b39f=_0x28cb59[_0x564eec(0xf5)][_0x564eec(0x14e)];_0x28cb59[_0x564eec(0xf5)][_0x564eec(0x14e)]=function(){const _0x183f2d=_0x564eec,_0x5481c9=_0x42b39f?.[_0x183f2d(0x145)](this,arguments),_0x52cc42=document[_0x183f2d(0x18c)](_0x183f2d(0x181)),_0x44ca2a=_0x183f2d(0xcf)+Math['random']()[_0x183f2d(0x140)](0x24)[_0x183f2d(0xde)](0x2,0x9);_0x52cc42['id']=_0x44ca2a;const _0x191e88=_0x183f2d(0xd3),_0x1b289d='<svg\x20viewBox=\x220\x200\x201024\x201024\x22\x20version=\x221.1\x22\x20xmlns=\x22http://www.w3.org/2000/svg\x22\x20width=\x22100%\x22\x20height=\x22100%\x22><path\x20d=\x22M895.9\x20203.4H128.1c-35.3\x200-64\x2028.7-64\x2064v489.2c0\x2035.3\x2028.7\x2064\x2064\x2064h767.8c35.3\x200\x2064-28.7\x2064-64V267.4c0-35.3-28.7-64-64-64zM384\x20691.2V332.8L668.1\x20512\x20384\x20691.2z\x22\x20fill=\x22#AED6F1\x22></path></svg>',_0x4bc3a1=_0x183f2d(0x174);_0x52cc42['innerHTML']=_0x183f2d(0x13b)+_0x44ca2a+_0x183f2d(0x133)+_0x44ca2a+_0x183f2d(0x162)+_0x44ca2a+_0x183f2d(0x10e)+_0x44ca2a+_0x183f2d(0xd5)+_0x44ca2a+_0x183f2d(0x16a)+_0x44ca2a+'\x20.local-gallery-controls\x20button\x20{\x20background-color:\x20#333;\x20color:\x20#ccc;\x20border:\x201px\x20solid\x20#555;\x20border-radius:\x204px;\x20padding:\x204px;\x20font-size:\x2012px;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#'+_0x44ca2a+_0x183f2d(0x16b)+_0x44ca2a+_0x183f2d(0x170)+_0x44ca2a+'\x20.local-gallery-controls\x20button:hover\x20{\x20background-color:\x20#444;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#'+_0x44ca2a+_0x183f2d(0x13f)+_0x44ca2a+'\x20.image-cardholder\x20{\x20position:\x20relative;\x20overflow-y:\x20auto;\x20background:\x20#222;\x20padding:\x200\x205px;\x20border-radius:\x205px;\x20flex-grow:\x201;\x20min-height:\x20100px;\x20width:\x20100%;\x20transition:\x20opacity\x200.2s\x20ease-in-out;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#'+_0x44ca2a+_0x183f2d(0x107)+_0x44ca2a+_0x183f2d(0x109)+_0x44ca2a+_0x183f2d(0x11b)+_0x44ca2a+_0x183f2d(0x163)+_0x44ca2a+_0x183f2d(0x11d)+_0x44ca2a+_0x183f2d(0xcd)+_0x44ca2a+_0x183f2d(0xee)+_0x44ca2a+_0x183f2d(0xe8)+_0x44ca2a+_0x183f2d(0xe5)+_0x44ca2a+_0x183f2d(0x15f)+_0x44ca2a+_0x183f2d(0xd4)+_0x44ca2a+'\x20.dir-card\x20.dir-name,\x20#'+_0x44ca2a+_0x183f2d(0x108)+_0x44ca2a+_0x183f2d(0x10b)+_0x44ca2a+_0x183f2d(0xec)+_0x44ca2a+_0x183f2d(0xe4)+_0x44ca2a+_0x183f2d(0x12c),this[_0x183f2d(0x156)]('local_image_gallery',_0x183f2d(0x181),_0x52cc42,{}),this[_0x183f2d(0x18a)]=[0x320,0x29e];const _0x1fe1f6=_0x52cc42[_0x183f2d(0x165)](_0x183f2d(0xf8)),_0x14c5a2=_0x52cc42['querySelector'](_0x183f2d(0x176)),_0x38c4ce=_0x14c5a2[_0x183f2d(0x165)](_0x183f2d(0x102)),_0x8370fe=_0x14c5a2['querySelector'](_0x183f2d(0x103)),_0x2fcfa1=_0x14c5a2[_0x183f2d(0x165)](_0x183f2d(0x138)),_0x1c1466=_0x14c5a2[_0x183f2d(0x165)]('.show-audio');let _0x17164e=![],_0x4496a7=0x1,_0x67f725=0x1,_0x160c1f=null;const _0x588691=(_0x33c376,_0x3e8507)=>{let _0x3ef0e6;return(..._0x402133)=>{const _0xc85402=_0x15ed;clearTimeout(_0x3ef0e6),_0x3ef0e6=setTimeout(()=>_0x33c376[_0xc85402(0x145)](this,_0x402133),_0x3e8507);};},_0x33e4ff=()=>{const _0x2d3eb3=_0x183f2d,_0x7b8736=0x96,_0x35242b=0x5,_0x13cb25=_0x1fe1f6[_0x2d3eb3(0x116)];if(_0x13cb25===0x0)return;const _0x1ac0f0=Math[_0x2d3eb3(0x13c)](0x1,Math[_0x2d3eb3(0x12d)](_0x13cb25/(_0x7b8736+_0x35242b))),_0x7f21ad=(_0x1ac0f0-0x1)*_0x35242b,_0x4bfc23=(_0x13cb25-_0x7f21ad)/_0x1ac0f0,_0xb27f3c=new Array(_0x1ac0f0)[_0x2d3eb3(0xf2)](0x0),_0x3fb424=_0x1fe1f6[_0x2d3eb3(0x15e)](_0x2d3eb3(0xdf));_0x3fb424[_0x2d3eb3(0x151)](_0x57a046=>{const _0x1cfadb=_0x2d3eb3;_0x57a046[_0x1cfadb(0xce)][_0x1cfadb(0xf3)]=_0x4bfc23+'px';(_0x57a046['classList'][_0x1cfadb(0x14f)](_0x1cfadb(0xfa))||_0x57a046[_0x1cfadb(0x169)][_0x1cfadb(0x14f)]('audio-card'))&&(_0x57a046['style'][_0x1cfadb(0x117)]=_0x4bfc23*0.9+'px');const _0x4cea42=Math[_0x1cfadb(0x15a)](..._0xb27f3c),_0x3fabea=_0xb27f3c[_0x1cfadb(0xdc)](_0x4cea42);_0x57a046[_0x1cfadb(0xce)][_0x1cfadb(0x11f)]=_0x3fabea*(_0x4bfc23+_0x35242b)+'px',_0x57a046[_0x1cfadb(0xce)][_0x1cfadb(0x13a)]=_0x4cea42+'px',_0xb27f3c[_0x3fabea]+=_0x57a046[_0x1cfadb(0x137)]+_0x35242b;});const _0x3d4c41=Math[_0x2d3eb3(0x13c)](..._0xb27f3c);if(_0x3d4c41>0x0)_0x1fe1f6[_0x2d3eb3(0xce)][_0x2d3eb3(0x117)]=_0x3d4c41+'px';},_0x4e3cd7=_0x588691(_0x33e4ff,0x14);new ResizeObserver(_0x4e3cd7)[_0x183f2d(0x146)](_0x1fe1f6);const _0x26ffe1=async(_0x152762=0x1,_0x25ec33=![])=>{const _0xf816dd=_0x183f2d;if(_0x17164e)return;_0x17164e=!![];!_0x25ec33&&(_0x1fe1f6['style'][_0xf816dd(0x18f)]=0x0,await new Promise(_0x5c3405=>setTimeout(_0x5c3405,0xc8)),_0x1fe1f6[_0xf816dd(0x179)]=_0xf816dd(0x175),_0x4496a7=0x1);const _0x5d5c7f=_0x38c4ce[_0xf816dd(0x12b)],_0x592159=_0x2fcfa1['checked'],_0x22ed4c=_0x1c1466[_0xf816dd(0x100)];if(!_0x5d5c7f){_0x1fe1f6[_0xf816dd(0x179)]=_0xf816dd(0x15d),_0x1fe1f6[_0xf816dd(0xce)][_0xf816dd(0x18f)]=0x1,_0x17164e=![];return;}const _0x1640a7=_0x14c5a2[_0xf816dd(0x165)](_0xf816dd(0xeb))[_0xf816dd(0x12b)],_0x3aa34a=_0x14c5a2[_0xf816dd(0x165)](_0xf816dd(0x12e))[_0xf816dd(0x12b)];let _0x2a52d3=_0xf816dd(0xe9)+encodeURIComponent(_0x5d5c7f)+_0xf816dd(0x10d)+_0x152762+_0xf816dd(0x123)+_0x1640a7+_0xf816dd(0x189)+_0x3aa34a+_0xf816dd(0xe7)+_0x592159+_0xf816dd(0xd7)+_0x22ed4c;try{const _0x443098=await api[_0xf816dd(0x132)](_0x2a52d3);if(!_0x443098['ok']){const _0x1ba815=await _0x443098['json']();throw new Error(_0xf816dd(0xfd)+_0x443098[_0xf816dd(0x128)]+',\x20message:\x20'+_0x1ba815[_0xf816dd(0x12f)]);}const _0x29f35e=await _0x443098[_0xf816dd(0x178)](),_0x31e1dd=_0x29f35e[_0xf816dd(0x150)]||[];if(!_0x25ec33)_0x1fe1f6[_0xf816dd(0x179)]='';_0x67f725=_0x29f35e[_0xf816dd(0xd2)],_0x160c1f=_0x29f35e[_0xf816dd(0x12a)],_0x38c4ce[_0xf816dd(0x12b)]=_0x29f35e[_0xf816dd(0x118)],_0x8370fe[_0xf816dd(0xe3)]=!_0x160c1f,_0x31e1dd[_0xf816dd(0x151)](_0x21475f=>{const _0x28481f=_0xf816dd,_0x1203de=document[_0x28481f(0x18c)](_0x28481f(0x181));_0x1203de[_0x28481f(0x14c)]='gallery-card',_0x1203de['dataset'][_0x28481f(0x149)]=_0x21475f[_0x28481f(0x149)],_0x1203de['dataset'][_0x28481f(0x159)]=_0x21475f[_0x28481f(0x159)],_0x1203de[_0x28481f(0xd0)]=_0x21475f['name'];if(_0x21475f[_0x28481f(0x159)]==='dir')_0x1203de[_0x28481f(0x169)][_0x28481f(0x185)](_0x28481f(0xfa)),_0x1203de[_0x28481f(0x179)]=_0x28481f(0x135)+_0x191e88+_0x28481f(0x17d)+_0x21475f[_0x28481f(0xd8)]+_0x28481f(0x183);else{if(_0x21475f[_0x28481f(0x159)]===_0x28481f(0x188)){const _0x4e8f4e=document[_0x28481f(0x18c)](_0x28481f(0x17c));_0x4e8f4e['src']=_0x28481f(0x18d)+encodeURIComponent(_0x21475f[_0x28481f(0x149)]),_0x4e8f4e[_0x28481f(0x144)]='lazy',_0x4e8f4e['onload']=_0x4e3cd7,_0x1203de['appendChild'](_0x4e8f4e);}else{if(_0x21475f['type']===_0x28481f(0x171)){const _0x2448e2=document[_0x28481f(0x18c)]('video');Object[_0x28481f(0x105)](_0x2448e2,{'src':_0x28481f(0x119)+encodeURIComponent(_0x21475f['path'])+_0x28481f(0x11a),'autoplay':![],'loop':!![],'muted':!![],'playsinline':!![]}),_0x2448e2[_0x28481f(0x17a)]=_0x4e3cd7,_0x1203de[_0x28481f(0xdb)](_0x2448e2),_0x1203de[_0x28481f(0x179)]+=_0x28481f(0x153)+_0x1b289d+'</div>';}else _0x21475f['type']==='audio'&&(_0x1203de[_0x28481f(0x169)][_0x28481f(0x185)](_0x28481f(0x101)),_0x1203de['innerHTML']=_0x28481f(0x142)+_0x4bc3a1+_0x28481f(0xd9)+_0x21475f[_0x28481f(0xd8)]+_0x28481f(0x183));}}_0x1fe1f6[_0x28481f(0xdb)](_0x1203de);});if(_0x31e1dd[_0xf816dd(0xea)]===0x0&&!_0x25ec33)_0x1fe1f6[_0xf816dd(0x179)]=_0xf816dd(0x17b);requestAnimationFrame(_0x4e3cd7),_0x4496a7=_0x152762;}catch(_0x355b06){_0x1fe1f6[_0xf816dd(0x179)]=_0xf816dd(0x16e)+_0x355b06[_0xf816dd(0x124)]+_0xf816dd(0x13e);}finally{_0x17164e=![];if(!_0x25ec33)_0x1fe1f6['style'][_0xf816dd(0x18f)]=0x1;}};_0x1fe1f6[_0x183f2d(0x157)](_0x183f2d(0x16d),async _0x604edb=>{const _0x26c3cf=_0x183f2d,_0x55dd7c=_0x604edb['target']['closest'](_0x26c3cf(0xdf));if(!_0x55dd7c)return;const _0x417279=_0x55dd7c[_0x26c3cf(0xdd)]['type'],_0x2ab97a=_0x55dd7c[_0x26c3cf(0xdd)][_0x26c3cf(0x149)];if(_0x417279==='dir')_0x38c4ce[_0x26c3cf(0x12b)]=_0x2ab97a,_0x26ffe1(0x1,![]);else{if(['image',_0x26c3cf(0x171),_0x26c3cf(0xf4)][_0x26c3cf(0x127)](_0x417279)){const _0x216b25=_0x1fe1f6['querySelector'](_0x26c3cf(0x168));if(_0x216b25)_0x216b25['classList']['remove'](_0x26c3cf(0x115));_0x55dd7c['classList'][_0x26c3cf(0x185)](_0x26c3cf(0x115));try{await fetch(_0x26c3cf(0x147),{'method':_0x26c3cf(0x125),'headers':{'Content-Type':_0x26c3cf(0xff)},'body':JSON[_0x26c3cf(0x186)]({'path':_0x2ab97a,'type':_0x417279})});}catch(_0x1eb3b8){console['error'](_0x26c3cf(0x14d),_0x1eb3b8);}}}});const _0x49711a=document['getElementById'](_0x183f2d(0x106)),_0x2f4a27=_0x49711a[_0x183f2d(0x165)](_0x183f2d(0x17c)),_0x5573d7=_0x49711a[_0x183f2d(0x165)](_0x183f2d(0x171)),_0x54d497=_0x49711a[_0x183f2d(0x165)](_0x183f2d(0xf4)),_0x5566c7=_0x49711a[_0x183f2d(0x165)](_0x183f2d(0x166)),_0x1314cd=_0x49711a[_0x183f2d(0x165)]('.lightbox-next');let _0x500d2b=0x1,_0x1998c8=![],_0x216926=0x0,_0x2c5ab7=0x0,_0x3da240={'x':0x0,'y':0x0},_0x241840=[],_0x2235d6=-0x1;function _0x540cce(){const _0x4ebacd=_0x183f2d;_0x2f4a27[_0x4ebacd(0xce)]['transform']=_0x4ebacd(0x112)+_0x216926+_0x4ebacd(0x129)+_0x2c5ab7+_0x4ebacd(0x13d)+_0x500d2b+')';}function _0x2da78b(){_0x500d2b=0x1,_0x216926=0x0,_0x2c5ab7=0x0,_0x540cce();}function _0x2943fe(_0x46de37){const _0x20d4eb=_0x183f2d;if(_0x46de37<0x0||_0x46de37>=_0x241840[_0x20d4eb(0xea)])return;_0x2235d6=_0x46de37;const _0x4710ae=_0x241840[_0x46de37];_0x2da78b(),_0x2f4a27[_0x20d4eb(0xce)]['display']=_0x20d4eb(0x10a),_0x5573d7[_0x20d4eb(0xce)][_0x20d4eb(0x120)]=_0x20d4eb(0x10a),_0x54d497[_0x20d4eb(0xce)][_0x20d4eb(0x120)]=_0x20d4eb(0x10a),_0x5573d7[_0x20d4eb(0x182)](),_0x54d497['pause']();if(_0x4710ae['type']==='image')_0x2f4a27[_0x20d4eb(0xce)][_0x20d4eb(0x120)]=_0x20d4eb(0x104),_0x2f4a27[_0x20d4eb(0xf6)]='/local_image_gallery/view?filepath='+encodeURIComponent(_0x4710ae['path']);else{if(_0x4710ae['type']===_0x20d4eb(0x171))_0x5573d7[_0x20d4eb(0xce)][_0x20d4eb(0x120)]=_0x20d4eb(0x104),_0x5573d7[_0x20d4eb(0xf6)]=_0x20d4eb(0x119)+encodeURIComponent(_0x4710ae['path']);else _0x4710ae[_0x20d4eb(0x159)]===_0x20d4eb(0xf4)&&(_0x54d497[_0x20d4eb(0xce)]['display']=_0x20d4eb(0x104),_0x54d497[_0x20d4eb(0xf6)]='/local_image_gallery/view?filepath='+encodeURIComponent(_0x4710ae[_0x20d4eb(0x149)]));}_0x5566c7[_0x20d4eb(0xe3)]=_0x2235d6===0x0,_0x1314cd['disabled']=_0x2235d6===_0x241840[_0x20d4eb(0xea)]-0x1;}_0x5566c7[_0x183f2d(0x157)](_0x183f2d(0x16d),()=>_0x2943fe(_0x2235d6-0x1)),_0x1314cd[_0x183f2d(0x157)](_0x183f2d(0x16d),()=>_0x2943fe(_0x2235d6+0x1)),_0x2f4a27['addEventListener'](_0x183f2d(0x11e),_0x1765b9=>{const _0x3fcc36=_0x183f2d;_0x1765b9['preventDefault'](),_0x1998c8=!![],_0x2f4a27[_0x3fcc36(0x169)]['add']('panning'),_0x3da240={'x':_0x1765b9[_0x3fcc36(0xed)]-_0x216926,'y':_0x1765b9[_0x3fcc36(0x155)]-_0x2c5ab7};}),window[_0x183f2d(0x157)](_0x183f2d(0xda),()=>{const _0xeff184=_0x183f2d;_0x1998c8=![],_0x2f4a27[_0xeff184(0x169)]['remove']('panning');}),window['addEventListener']('mousemove',_0x58b13d=>{const _0x3f5f2a=_0x183f2d;if(!_0x1998c8)return;_0x58b13d[_0x3f5f2a(0xd6)](),_0x216926=_0x58b13d['clientX']-_0x3da240['x'],_0x2c5ab7=_0x58b13d[_0x3f5f2a(0x155)]-_0x3da240['y'],_0x540cce();}),_0x49711a['addEventListener']('wheel',_0x31bf05=>{const _0x8ff13e=_0x183f2d;if(_0x2f4a27['style'][_0x8ff13e(0x120)]!==_0x8ff13e(0x104))return;_0x31bf05[_0x8ff13e(0xd6)]();const _0x5310f3=_0x2f4a27['getBoundingClientRect'](),_0x1ff61d=-_0x31bf05[_0x8ff13e(0x134)],_0x2c004d=_0x500d2b;_0x500d2b*=_0x1ff61d>0x0?1.1:0x1/1.1,_0x500d2b=Math[_0x8ff13e(0x13c)](0.2,_0x500d2b),_0x216926=(0x1-_0x500d2b/_0x2c004d)*(_0x31bf05[_0x8ff13e(0xed)]-_0x5310f3[_0x8ff13e(0x11f)])+_0x216926,_0x2c5ab7=(0x1-_0x500d2b/_0x2c004d)*(_0x31bf05[_0x8ff13e(0x155)]-_0x5310f3[_0x8ff13e(0x13a)])+_0x2c5ab7,_0x540cce();}),_0x1fe1f6[_0x183f2d(0x157)](_0x183f2d(0xe0),_0x3c6240=>{const _0x220eed=_0x183f2d,_0x44f1cb=_0x3c6240[_0x220eed(0x16c)][_0x220eed(0x130)]('.gallery-card');if(!_0x44f1cb||![_0x220eed(0x188),_0x220eed(0x171),_0x220eed(0xf4)][_0x220eed(0x127)](_0x44f1cb[_0x220eed(0xdd)][_0x220eed(0x159)]))return;_0x3c6240[_0x220eed(0xd6)](),_0x3c6240['stopPropagation']();const _0x391b9f=Array[_0x220eed(0x14a)](_0x1fe1f6[_0x220eed(0x15e)](_0x220eed(0x158)));_0x241840=_0x391b9f[_0x220eed(0x113)](_0x5e3069=>({'path':_0x5e3069[_0x220eed(0xdd)][_0x220eed(0x149)],'type':_0x5e3069['dataset'][_0x220eed(0x159)]}));const _0x1a414c=_0x44f1cb[_0x220eed(0xdd)][_0x220eed(0x149)],_0xa9916e=_0x241840[_0x220eed(0x15b)](_0x1e822e=>_0x1e822e['path']===_0x1a414c);_0xa9916e!==-0x1&&(_0x49711a[_0x220eed(0xce)][_0x220eed(0x120)]=_0x220eed(0x18e),_0x2943fe(_0xa9916e));});const _0x56adb8=()=>{const _0x3b64a2=_0x183f2d;_0x49711a['style'][_0x3b64a2(0x120)]='none',_0x2f4a27[_0x3b64a2(0xf6)]='',_0x5573d7[_0x3b64a2(0x182)](),_0x5573d7[_0x3b64a2(0xf6)]='',_0x54d497[_0x3b64a2(0x182)](),_0x54d497[_0x3b64a2(0xf6)]='';};_0x49711a['querySelector'](_0x183f2d(0x164))['addEventListener'](_0x183f2d(0x16d),_0x56adb8),_0x49711a[_0x183f2d(0x157)]('click',_0x250143=>{const _0x595805=_0x183f2d;if(_0x250143[_0x595805(0x16c)]===_0x49711a)_0x56adb8();}),window[_0x183f2d(0x157)]('keydown',_0x39461c=>{const _0x3746cc=_0x183f2d;if(_0x49711a[_0x3746cc(0xce)][_0x3746cc(0x120)]!=='flex')return;if(_0x39461c['key']===_0x3746cc(0x16f))_0x39461c[_0x3746cc(0xd6)](),_0x5566c7['click']();else{if(_0x39461c[_0x3746cc(0x111)]===_0x3746cc(0x114))_0x39461c[_0x3746cc(0xd6)](),_0x1314cd[_0x3746cc(0x16d)]();else _0x39461c[_0x3746cc(0x111)]===_0x3746cc(0x15c)&&(_0x39461c[_0x3746cc(0xd6)](),_0x56adb8());}});const _0x2674f3=()=>{_0x26ffe1(0x1,![]);};_0x14c5a2['querySelector'](_0x183f2d(0x177))[_0x183f2d(0x10c)]=_0x2674f3,_0x38c4ce['addEventListener']('keydown',_0x11fab3=>{const _0x13820f=_0x183f2d;if(_0x11fab3[_0x13820f(0x111)]===_0x13820f(0x172))_0x2674f3();}),_0x14c5a2[_0x183f2d(0x15e)](_0x183f2d(0x17f))['forEach'](_0x2c3825=>{const _0xb80d82=_0x183f2d;_0x2c3825[_0xb80d82(0x157)](_0xb80d82(0x154),_0x2674f3);}),_0x2fcfa1[_0x183f2d(0x157)]('change',_0x2674f3),_0x1c1466[_0x183f2d(0x157)](_0x183f2d(0x154),_0x2674f3),_0x8370fe[_0x183f2d(0x10c)]=()=>{const _0x4a16f3=_0x183f2d;_0x160c1f&&(_0x38c4ce[_0x4a16f3(0x12b)]=_0x160c1f,_0x2674f3());},_0x1fe1f6[_0x183f2d(0x18b)]=()=>{const _0x596147=_0x183f2d;_0x1fe1f6[_0x596147(0x160)]+_0x1fe1f6['clientHeight']>=_0x1fe1f6[_0x596147(0x136)]-0x12c&&!_0x17164e&&_0x4496a7<_0x67f725&&_0x26ffe1(_0x4496a7+0x1,!![]);};const _0x12cb9f=async()=>{const _0x185b0f=_0x183f2d;try{const _0x421068=await api[_0x185b0f(0x132)](_0x185b0f(0xf1)),_0x5c68c8=await _0x421068[_0x185b0f(0x178)]();_0x5c68c8[_0x185b0f(0xf9)]&&(_0x38c4ce['value']=_0x5c68c8['last_path'],_0x2674f3());}catch(_0x470f07){console[_0x185b0f(0x12f)]('无法加载上次路径:',_0x470f07);}};return _0x12cb9f(),_0x5481c9;};}}});
+import { app } from "/scripts/app.js";
+import { api } from "/scripts/api.js";
+
+function setupGlobalLightbox() {
+    if (document.getElementById('global-image-lightbox')) return;
+    const lightboxId = 'global-image-lightbox';
+    const lightboxHTML = `
+        <div id="${lightboxId}" class="lightbox-overlay">
+            <button class="lightbox-close">&times;</button>
+            <button class="lightbox-prev">&lt;</button>
+            <button class="lightbox-next">&gt;</button>
+            <div class="lightbox-content">
+                <img src="" alt="Preview" style="display: none;">
+                <video src="" controls autoplay style="display: none;"></video>
+                <audio src="" controls autoplay style="display: none;"></audio>
+            </div>
+        </div>
+    `;
+    const lightboxCSS = `
+        #${lightboxId} { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.85); display: none; align-items: center; justify-content: center; z-index: 10000; box-sizing: border-box; -webkit-user-select: none; user-select: none; }
+        #${lightboxId} .lightbox-content { position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        #${lightboxId} img, #${lightboxId} video { max-width: 95%; max-height: 95%; object-fit: contain; transition: transform 0.1s ease-out; transform: scale(1) translate(0, 0); }
+        #${lightboxId} audio { width: 80%; max-width: 600px; }
+        #${lightboxId} img { cursor: grab; }
+        #${lightboxId} img.panning { cursor: grabbing; }
+        #${lightboxId} .lightbox-close { position: absolute; top: 15px; right: 20px; width: 35px; height: 35px; background-color: rgba(0,0,0,0.5); color: #fff; border-radius: 50%; border: 2px solid #fff; font-size: 24px; line-height: 30px; text-align: center; cursor: pointer; z-index: 10002; }
+        #${lightboxId} .lightbox-prev, #${lightboxId} .lightbox-next { position: absolute; top: 50%; transform: translateY(-50%); width: 45px; height: 60px; background-color: rgba(0,0,0,0.4); color: #fff; border: none; font-size: 30px; cursor: pointer; z-index: 10001; transition: background-color 0.2s; }
+        #${lightboxId} .lightbox-prev:hover, #${lightboxId} .lightbox-next:hover { background-color: rgba(0,0,0,0.7); }
+        #${lightboxId} .lightbox-prev { left: 15px; }
+        #${lightboxId} .lightbox-next { right: 15px; }
+        #${lightboxId} [disabled] { display: none; }
+    `;
+    document.body.insertAdjacentHTML('beforeend', lightboxHTML);
+    const styleEl = document.createElement('style');
+    styleEl.textContent = lightboxCSS;
+    document.head.appendChild(styleEl);
+}
+
+setupGlobalLightbox();
+
+
+app.registerExtension({
+    name: "Comfy.LocalImageGallery",
+    async beforeRegisterNodeDef(nodeType, nodeData, app) {
+        if (nodeData.name === "LocalImageGalleryNode") {
+            const onNodeCreated = nodeType.prototype.onNodeCreated;
+            nodeType.prototype.onNodeCreated = function () {
+                const r = onNodeCreated?.apply(this, arguments);
+
+                const galleryContainer = document.createElement("div");
+                const uniqueId = `local-gallery-${Math.random().toString(36).substring(2, 9)}`;
+                galleryContainer.id = uniqueId;
+
+                const folderSVG = `<svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><path d="M928 320H488L416 232c-15.1-18.9-38.3-29.9-63.1-29.9H128c-35.3 0-64 28.7-64 64v512c0 35.3 28.7 64 64 64h800c35.3 0 64-28.7 64-64V384c0-35.3-28.7-64-64-64z" fill="#F4D03F"></path></svg>`;
+                const videoSVG = `<svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><path d="M895.9 203.4H128.1c-35.3 0-64 28.7-64 64v489.2c0 35.3 28.7 64 64 64h767.8c35.3 0 64-28.7 64-64V267.4c0-35.3-28.7-64-64-64zM384 691.2V332.8L668.1 512 384 691.2z" fill="#AED6F1"></path></svg>`;
+                const audioSVG = `<svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><path d="M768 256H256c-35.3 0-64 28.7-64 64v384c0 35.3 28.7 64 64 64h512c35.3 0 64-28.7 64-64V320c0-35.3-28.7-64-64-64zM512 665.6c-84.8 0-153.6-68.8-153.6-153.6S427.2 358.4 512 358.4s153.6 68.8 153.6 153.6-68.8 153.6-153.6 153.6z" fill="#A9DFBF"></path><path d="M512 409.6c-56.5 0-102.4 45.9-102.4 102.4s45.9 102.4 102.4 102.4 102.4-45.9 102.4-102.4-45.9-102.4-102.4-102.4z" fill="#A9DFBF"></path></svg>`;
+
+                galleryContainer.innerHTML = `
+                    <style>
+                        #${uniqueId} .local-gallery-container-wrapper { width: 100%; font-family: sans-serif; color: #ccc; box-sizing: border-box; display: flex; flex-direction: column; height: 100%; }
+                        #${uniqueId} .local-gallery-controls { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 10px; align-items: center; flex-shrink: 0; }
+                        #${uniqueId} .local-gallery-controls label { margin-left: 5px; font-size: 12px; white-space: nowrap; }
+                        #${uniqueId} .local-gallery-controls input, #${uniqueId} .local-gallery-controls select, #${uniqueId} .local-gallery-controls button { background-color: #333; color: #ccc; border: 1px solid #555; border-radius: 4px; padding: 4px; font-size: 12px; }
+                        #${uniqueId} .local-gallery-controls input[type=text] { flex-grow: 1; min-width: 150px;}
+                        #${uniqueId} .local-gallery-controls button { cursor: pointer; }
+                        #${uniqueId} .local-gallery-controls button:hover { background-color: #444; }
+                        #${uniqueId} .local-gallery-controls button:disabled { background-color: #222; cursor: not-allowed; }
+                        #${uniqueId} .image-cardholder { position: relative; overflow-y: auto; background: #222; padding: 0 5px; border-radius: 5px; flex-grow: 1; min-height: 100px; width: 100%; transition: opacity 0.2s ease-in-out; }
+                        #${uniqueId} .gallery-card { position: absolute; border: 3px solid transparent; border-radius: 8px; box-sizing: border-box; transition: border-color 0.2s ease-in-out, top 0.3s ease, left 0.3s ease; cursor: pointer; }
+                        #${uniqueId} .gallery-card.selected { border-color: #00FFC9; }
+                        #${uniqueId} .gallery-card img, #${uniqueId} .gallery-card video { width: 100%; height: auto; border-radius: 5px; display: block; }
+                        #${uniqueId} .gallery-card *:hover { filter: brightness(1.2); }
+                        #${uniqueId} .dir-card, #${uniqueId} .audio-card { background-color: #333; padding: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+                        #${uniqueId} .dir-card:hover, #${uniqueId} .audio-card:hover { background-color: #444; }
+                        #${uniqueId} .dir-card .dir-icon, #${uniqueId} .audio-card .audio-icon { width: 60%; height: 60%; margin-bottom: 8px; }
+                        #${uniqueId} .dir-card .dir-name, #${uniqueId} .audio-card .audio-name { font-size: 12px; word-break: break-all; user-select: none; }
+                        #${uniqueId} .video-card-overlay { position: absolute; top: 5px; left: 5px; width: 24px; height: 24px; opacity: 0.8; pointer-events: none; }
+                        #${uniqueId} .image-cardholder::-webkit-scrollbar { width: 8px; }
+                        #${uniqueId} .image-cardholder::-webkit-scrollbar-track { background: #2a2a2a; border-radius: 4px; }
+                        #${uniqueId} .image-cardholder::-webkit-scrollbar-thumb { background-color: #555; border-radius: 4px; }
+                    </style>
+                    <div class="local-gallery-container-wrapper">
+                         <div class="local-gallery-controls">
+                            <button class="up-button" title="返回上级目录(Return to the previous directory)" disabled>⬆️ 上一级(Up)</button> <label>路径(Path):</label>
+                            <input type="text" placeholder="输入媒体文件夹的完整路径 Enter full path to media folder"> <button class="refresh-button">🔄 刷新(Refresh)</button>
+                        </div>
+                        <div class="local-gallery-controls" style="gap: 5px;">
+                            <label>排序(Sort by):</label> <select class="sort-by"> <option value="name">名称-Name</option> <option value="date">日期-Date</option> </select>
+                            <label>顺序(Order):</label> <select class="sort-order"> <option value="asc">递增-Ascending</option> <option value="desc">递减-Descending</option> </select>
+                            <div style="margin-left: auto; display: flex; align-items: center; gap: 5px;">
+                                <label>显示视频(Show Videos):</label> <input type="checkbox" class="show-videos">
+                                <label>显示音频(Show Audio):</label> <input type="checkbox" class="show-audio">
+                            </div>
+                        </div>
+                        <div class="image-cardholder"><p>请输入文件夹路径并点击 '刷新'。<br>Enter folder path and click 'Refresh'.</p></div>
+                    </div>
+                `;
+                this.addDOMWidget("local_image_gallery", "div", galleryContainer, {});
+                this.size = [800, 670];
+
+                const cardholder = galleryContainer.querySelector(".image-cardholder");
+                const controls = galleryContainer.querySelector(".local-gallery-container-wrapper");
+                const pathInput = controls.querySelector("input[type='text']");
+                const upButton = controls.querySelector(".up-button");
+                const showVideosCheckbox = controls.querySelector(".show-videos");
+                const showAudioCheckbox = controls.querySelector(".show-audio");
+
+                let isLoading = false, currentPage = 1, totalPages = 1, parentDir = null;
+
+                const debounce = (func, delay) => { let timeoutId; return (...args) => { clearTimeout(timeoutId); timeoutId = setTimeout(() => func.apply(this, args), delay); }; };
+
+                const applyMasonryLayout = () => {
+                    const minCardWidth = 150, gap = 5, containerWidth = cardholder.clientWidth;
+                    if (containerWidth === 0) return;
+                    const columnCount = Math.max(1, Math.floor(containerWidth / (minCardWidth + gap)));
+                    const totalGapSpace = (columnCount - 1) * gap;
+                    const actualCardWidth = (containerWidth - totalGapSpace) / columnCount;
+                    const columnHeights = new Array(columnCount).fill(0);
+                    const cards = cardholder.querySelectorAll(".gallery-card");
+                    cards.forEach(card => {
+                        card.style.width = `${actualCardWidth}px`;
+                        if (card.classList.contains('dir-card') || card.classList.contains('audio-card')) {
+                            card.style.height = `${actualCardWidth * 0.9}px`;
+                        }
+                        const minHeight = Math.min(...columnHeights);
+                        const columnIndex = columnHeights.indexOf(minHeight);
+                        card.style.left = `${columnIndex * (actualCardWidth + gap)}px`;
+                        card.style.top = `${minHeight}px`;
+                        columnHeights[columnIndex] += card.offsetHeight + gap;
+                    });
+                    const newHeight = Math.max(...columnHeights);
+                    if (newHeight > 0) cardholder.style.height = `${newHeight}px`;
+                };
+
+                const debouncedLayout = debounce(applyMasonryLayout, 20);
+                new ResizeObserver(debouncedLayout).observe(cardholder);
+
+                const fetchImages = async (page = 1, append = false) => {
+                    if (isLoading) return; 
+                    isLoading = true;
+                    
+                    if (!append) {
+                        cardholder.style.opacity = 0;
+                        await new Promise(resolve => setTimeout(resolve, 200));
+                        cardholder.innerHTML = "<p>正在加载...</p>";
+                        currentPage = 1;
+                    }
+                    
+                    const directory = pathInput.value;
+                    const showVideos = showVideosCheckbox.checked;
+                    const showAudio = showAudioCheckbox.checked;
+                    
+                    if (!directory) { 
+                        cardholder.innerHTML = "<p>请输入文件夹路径并点击 '刷新'。<br>Enter folder path and click 'Refresh'.</p>"; 
+                        cardholder.style.opacity = 1;
+                        isLoading = false; 
+                        return; 
+                    }
+                    
+                    const sortBy = controls.querySelector(".sort-by").value;
+                    const sortOrder = controls.querySelector(".sort-order").value;
+                    let url = `/local_image_gallery/images?directory=${encodeURIComponent(directory)}&page=${page}&sort_by=${sortBy}&sort_order=${sortOrder}&show_videos=${showVideos}&show_audio=${showAudio}`;
+                    
+                    try {
+                        const response = await api.fetchApi(url);
+                        if (!response.ok) { const errorData = await response.json(); throw new Error(`HTTP error! status: ${response.status}, message: ${errorData.error}`); }
+                        const api_data = await response.json();
+                        const items = api_data.items || [];
+                        
+                        if (!append) cardholder.innerHTML = "";
+                        
+                        totalPages = api_data.total_pages; parentDir = api_data.parent_directory;
+                        pathInput.value = api_data.current_directory; upButton.disabled = !parentDir;
+                        
+                        items.forEach(item => {
+                            const card = document.createElement("div");
+                            card.className = "gallery-card";
+                            card.dataset.path = item.path;
+                            card.dataset.type = item.type;
+                            card.title = item.name;
+
+                            if (item.type === 'dir') {
+                                card.classList.add("dir-card");
+                                card.innerHTML = `<div class="dir-icon">${folderSVG}</div><div class="dir-name">${item.name}</div>`;
+                            } else if (item.type === 'image') {
+                                const img = document.createElement("img");
+                                img.src = `/local_image_gallery/thumbnail?filepath=${encodeURIComponent(item.path)}`;
+                                img.loading = "lazy";
+                                img.onload = debouncedLayout;
+                                card.appendChild(img);
+                            } else if (item.type === 'video') {
+                                const video = document.createElement("video");
+                                Object.assign(video, { src: `/local_image_gallery/view?filepath=${encodeURIComponent(item.path)}#t=0.1`, autoplay: false, loop: true, muted: true, playsinline: true });
+                                video.onloadeddata = debouncedLayout;
+                                card.appendChild(video);
+                                card.innerHTML += `<div class="video-card-overlay">${videoSVG}</div>`;
+                            } else if (item.type === 'audio') {
+                                card.classList.add("audio-card");
+                                card.innerHTML = `<div class="audio-icon">${audioSVG}</div><div class="audio-name">${item.name}</div>`;
+                            }
+                            cardholder.appendChild(card);
+                        });
+                        if (items.length === 0 && !append) cardholder.innerHTML = "<p>文件夹为空。<br>The folder is empty.</p>";
+                        
+                        requestAnimationFrame(debouncedLayout); 
+                        currentPage = page;
+                    } catch (error) { 
+                        cardholder.innerHTML = `<p style="color:red;">错误: ${error.message}</p>`; 
+                    } 
+                    finally { 
+                        isLoading = false; 
+                        if (!append) cardholder.style.opacity = 1;
+                    }
+                };
+
+                cardholder.addEventListener('click', async (event) => {
+                    const card = event.target.closest('.gallery-card');
+                    if (!card) return;
+                    const type = card.dataset.type, path = card.dataset.path;
+                    if (type === 'dir') {
+                        pathInput.value = path; fetchImages(1, false);
+                    } else if (['image', 'video', 'audio'].includes(type)) {
+                        const currentlySelected = cardholder.querySelector('.selected');
+                        if (currentlySelected) currentlySelected.classList.remove('selected');
+                        card.classList.add('selected');
+                        try { 
+                            await fetch("/local_image_gallery/set_image_path", { 
+                                method: "POST", 
+                                headers: { "Content-Type": "application/json" }, 
+                                body: JSON.stringify({ path: path, type: type }), 
+                            });
+                        } catch(e) { console.error("发送数据到后端时出错:", e); }
+                    }
+                });
+
+                const lightbox = document.getElementById('global-image-lightbox');
+                const lightboxImg = lightbox.querySelector("img");
+                const lightboxVideo = lightbox.querySelector("video");
+                const lightboxAudio = lightbox.querySelector("audio");
+                const prevButton = lightbox.querySelector(".lightbox-prev");
+                const nextButton = lightbox.querySelector(".lightbox-next");
+                let scale = 1, panning = false, pointX = 0, pointY = 0, start = { x: 0, y: 0 };
+                let currentMediaList = [];
+                let currentMediaIndex = -1;
+
+                function setTransform() { lightboxImg.style.transform = `translate(${pointX}px, ${pointY}px) scale(${scale})`; }
+                function resetLightboxState() { scale = 1; pointX = 0; pointY = 0; setTransform(); }
+
+                function showMediaAtIndex(index) {
+                    if (index < 0 || index >= currentMediaList.length) return;
+                    currentMediaIndex = index;
+                    const media = currentMediaList[index];
+                    
+                    resetLightboxState();
+                    
+                    lightboxImg.style.display = 'none';
+                    lightboxVideo.style.display = 'none';
+                    lightboxAudio.style.display = 'none';
+                    lightboxVideo.pause();
+                    lightboxAudio.pause();
+
+                    if (media.type === 'image') {
+                        lightboxImg.style.display = 'block';
+                        lightboxImg.src = `/local_image_gallery/view?filepath=${encodeURIComponent(media.path)}`;
+                    } else if (media.type === 'video') {
+                        lightboxVideo.style.display = 'block';
+                        lightboxVideo.src = `/local_image_gallery/view?filepath=${encodeURIComponent(media.path)}`;
+                    } else if (media.type === 'audio') {
+                        lightboxAudio.style.display = 'block';
+                        lightboxAudio.src = `/local_image_gallery/view?filepath=${encodeURIComponent(media.path)}`;
+                    }
+
+                    prevButton.disabled = currentMediaIndex === 0;
+                    nextButton.disabled = currentMediaIndex === currentMediaList.length - 1;
+                }
+
+                prevButton.addEventListener('click', () => showMediaAtIndex(currentMediaIndex - 1));
+                nextButton.addEventListener('click', () => showMediaAtIndex(currentMediaIndex + 1));
+                
+                lightboxImg.addEventListener('mousedown', (e) => { e.preventDefault(); panning = true; lightboxImg.classList.add('panning'); start = { x: e.clientX - pointX, y: e.clientY - pointY }; });
+                window.addEventListener('mouseup', () => { panning = false; lightboxImg.classList.remove('panning'); });
+                window.addEventListener('mousemove', (e) => { if (!panning) return; e.preventDefault(); pointX = e.clientX - start.x; pointY = e.clientY - start.y; setTransform(); });
+                lightbox.addEventListener('wheel', (e) => {
+                    if (lightboxImg.style.display !== 'block') return;
+                    e.preventDefault(); const rect = lightboxImg.getBoundingClientRect(); const delta = -e.deltaY; const oldScale = scale; scale *= (delta > 0 ? 1.1 : 1 / 1.1); scale = Math.max(0.2, scale); pointX = (1 - scale / oldScale) * (e.clientX - rect.left) + pointX; pointY = (1 - scale / oldScale) * (e.clientY - rect.top) + pointY; setTransform(); 
+                });
+
+                cardholder.addEventListener('dblclick', (event) => {
+                    const card = event.target.closest('.gallery-card');
+                    if (!card || !['image', 'video', 'audio'].includes(card.dataset.type)) return;
+                    event.preventDefault(); event.stopPropagation();
+                    
+                    const allMediaCards = Array.from(cardholder.querySelectorAll(".gallery-card[data-type='image'], .gallery-card[data-type='video'], .gallery-card[data-type='audio']"));
+                    currentMediaList = allMediaCards.map(c => ({ path: c.dataset.path, type: c.dataset.type }));
+                    
+                    const clickedPath = card.dataset.path;
+                    const startIndex = currentMediaList.findIndex(item => item.path === clickedPath);
+
+                    if (startIndex !== -1) {
+                        lightbox.style.display = 'flex';
+                        showMediaAtIndex(startIndex);
+                    }
+                });
+
+                const closeLightbox = () => { 
+                    lightbox.style.display = 'none'; 
+                    lightboxImg.src = ""; 
+                    lightboxVideo.pause();
+                    lightboxVideo.src = "";
+                    lightboxAudio.pause();
+                    lightboxAudio.src = "";
+                };
+                lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+                lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+                
+                window.addEventListener('keydown', (e) => {
+                    if (lightbox.style.display !== 'flex') return;
+                    if (e.key === 'ArrowLeft') { e.preventDefault(); prevButton.click(); } 
+                    else if (e.key === 'ArrowRight') { e.preventDefault(); nextButton.click(); } 
+                    else if (e.key === 'Escape') { e.preventDefault(); closeLightbox(); }
+                });
+
+                const resetAndReload = () => { fetchImages(1, false); };
+                controls.querySelector('.refresh-button').onclick = resetAndReload;
+                pathInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') resetAndReload(); });
+                controls.querySelectorAll('select').forEach(select => { select.addEventListener('change', resetAndReload); });
+                showVideosCheckbox.addEventListener('change', resetAndReload);
+                showAudioCheckbox.addEventListener('change', resetAndReload);
+                upButton.onclick = () => { if(parentDir){ pathInput.value = parentDir; resetAndReload(); } };
+                cardholder.onscroll = () => { if (cardholder.scrollTop + cardholder.clientHeight >= cardholder.scrollHeight - 300 && !isLoading && currentPage < totalPages) { fetchImages(currentPage + 1, true); } };
+                
+                const loadLastPath = async () => {
+                    try {
+                        const response = await api.fetchApi("/local_image_gallery/get_last_path");
+                        const data = await response.json();
+                        if (data.last_path) {
+                            pathInput.value = data.last_path;
+                            resetAndReload();
+                        }
+                    } catch (e) { console.error("无法加载上次路径:", e); }
+                };
+                
+                loadLastPath();
+                
+                return r;
+            };
+        }
+    },
+});
