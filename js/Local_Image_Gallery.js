@@ -81,18 +81,18 @@ app.registerExtension({
                     </style>
                     <div class="local-gallery-container-wrapper">
                          <div class="local-gallery-controls">
-                            <button class="up-button" title="返回上级目录(Return to the previous directory)" disabled>⬆️ 上一级(Up)</button> <label>路径(Path):</label>
-                            <input type="text" placeholder="输入媒体文件夹的完整路径 Enter full path to media folder"> <button class="refresh-button">🔄 刷新(Refresh)</button>
+                            <button class="up-button" title="Return to the previous directory" disabled>⬆️ Up</button> <label>Path:</label>
+                            <input type="text" placeholder="Enter full path to media folder"> <button class="refresh-button">🔄 Refresh</button>
                         </div>
                         <div class="local-gallery-controls" style="gap: 5px;">
-                            <label>排序(Sort by):</label> <select class="sort-by"> <option value="name">名称-Name</option> <option value="date">日期-Date</option> </select>
-                            <label>顺序(Order):</label> <select class="sort-order"> <option value="asc">递增-Ascending</option> <option value="desc">递减-Descending</option> </select>
+                            <label>Sort by:</label> <select class="sort-by"> <option value="name">Name</option> <option value="date">Date</option> </select>
+                            <label>Order:</label> <select class="sort-order"> <option value="asc">Ascending</option> <option value="desc">Descending</option> </select>
                             <div style="margin-left: auto; display: flex; align-items: center; gap: 5px;">
-                                <label>显示视频(Show Videos):</label> <input type="checkbox" class="show-videos">
-                                <label>显示音频(Show Audio):</label> <input type="checkbox" class="show-audio">
+                                <label>Show Videos:</label> <input type="checkbox" class="show-videos">
+                                <label>Show Audio:</label> <input type="checkbox" class="show-audio">
                             </div>
                         </div>
-                        <div class="image-cardholder"><p>请输入文件夹路径并点击 '刷新'。<br>Enter folder path and click 'Refresh'.</p></div>
+                        <div class="image-cardholder"><p>Enter folder path and click 'Refresh'.</p></div>
                     </div>
                 `;
                 this.addDOMWidget("local_image_gallery", "div", galleryContainer, {});
@@ -142,7 +142,7 @@ app.registerExtension({
                     if (!append) {
                         cardholder.style.opacity = 0;
                         await new Promise(resolve => setTimeout(resolve, 200));
-                        cardholder.innerHTML = "<p>正在加载...</p>";
+                        cardholder.innerHTML = "<p>Loading...</p>";
                         currentPage = 1;
                     }
                     
@@ -151,7 +151,7 @@ app.registerExtension({
                     const showAudio = showAudioCheckbox.checked;
                     
                     if (!directory) { 
-                        cardholder.innerHTML = "<p>请输入文件夹路径并点击 '刷新'。<br>Enter folder path and click 'Refresh'.</p>"; 
+                        cardholder.innerHTML = "<p>Enter folder path and click 'Refresh'.</p>"; 
                         cardholder.style.opacity = 1;
                         isLoading = false; 
                         return; 
@@ -200,12 +200,12 @@ app.registerExtension({
                             }
                             cardholder.appendChild(card);
                         });
-                        if (items.length === 0 && !append) cardholder.innerHTML = "<p>文件夹为空。<br>The folder is empty.</p>";
+                        if (items.length === 0 && !append) cardholder.innerHTML = "<p>The folder is empty.</p>";
                         
                         requestAnimationFrame(debouncedLayout); 
                         currentPage = page;
                     } catch (error) { 
-                        cardholder.innerHTML = `<p style="color:red;">错误: ${error.message}</p>`; 
+                        cardholder.innerHTML = `<p style="color:red;">Error: ${error.message}</p>`; 
                     } 
                     finally { 
                         isLoading = false; 
@@ -229,7 +229,7 @@ app.registerExtension({
                                 headers: { "Content-Type": "application/json" }, 
                                 body: JSON.stringify({ path: path, type: type }), 
                             });
-                        } catch(e) { console.error("发送数据到后端时出错:", e); }
+                        } catch(e) { console.error("An error occurred while sending data to the backend:", e); }
                     }
                 });
 
@@ -337,7 +337,7 @@ app.registerExtension({
                             pathInput.value = data.last_path;
                             resetAndReload();
                         }
-                    } catch (e) { console.error("无法加载上次路径:", e); }
+                    } catch (e) { console.error("Unable to load the last path:", e); }
                 };
                 
                 loadLastPath();
