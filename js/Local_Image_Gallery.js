@@ -59,7 +59,7 @@ app.registerExtension({
                     <style>
                         #${uniqueId} .local-gallery-container-wrapper { width: 100%; font-family: sans-serif; color: #ccc; box-sizing: border-box; display: flex; flex-direction: column; height: 100%; }
                         #${uniqueId} .local-gallery-controls { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 10px; align-items: center; flex-shrink: 0; }
-                        #${uniqueId} .local-gallery-controls label { margin-left: 5px; font-size: 12px; white-space: nowrap; }
+                        #${uniqueId} .local-gallery-controls label { margin-left: 0px; font-size: 12px; white-space: nowrap; }
                         #${uniqueId} .local-gallery-controls input, #${uniqueId} .local-gallery-controls select, #${uniqueId} .local-gallery-controls button { background-color: #333; color: #ccc; border: 1px solid #555; border-radius: 4px; padding: 4px; font-size: 12px; }
                         #${uniqueId} .local-gallery-controls input[type=text] { flex-grow: 1; min-width: 150px;}
                         #${uniqueId} .local-gallery-controls button { cursor: pointer; }
