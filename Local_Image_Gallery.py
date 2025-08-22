@@ -136,6 +136,22 @@ async def update_metadata(request):
         return web.json_response({"status": "ok", "message": "Metadata updated"})
     except Exception as e: return web.json_response({"status": "error", "message": str(e)}, status=500)
 
+@prompt_server.routes.get("/local_image_gallery/get_saved_paths")
+async def get_saved_paths(request):
+    config = load_config()
+    return web.json_response({"saved_paths": config.get("saved_paths", [])})
+
+@prompt_server.routes.post("/local_image_gallery/save_paths")
+async def save_paths(request):
+    try:
+        data = await request.json()
+        paths = data.get("paths", [])
+        config = load_config()
+        config["saved_paths"] = paths
+        save_config(config)
+        return web.json_response({"status": "ok"})
+    except Exception as e:
+        return web.json_response({"status": "error", "message": str(e)}, status=500)
 
 @prompt_server.routes.get("/local_image_gallery/images")
 async def get_local_images(request):

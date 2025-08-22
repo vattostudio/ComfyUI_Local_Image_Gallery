@@ -62,6 +62,8 @@ app.registerExtension({
                         #${uniqueId} .lmm-controls label { margin-left: 0px; font-size: 12px; white-space: nowrap; }
                         #${uniqueId} .lmm-controls input, #${uniqueId} .lmm-controls select, #${uniqueId} .lmm-controls button { background-color: #333; color: #ccc; border: 1px solid #555; border-radius: 4px; padding: 4px; font-size: 12px; }
                         #${uniqueId} .lmm-controls input[type=text] { flex-grow: 1; min-width: 150px;}
+                        #${uniqueId} .lmm-path-controls { flex-grow: 1; display: flex; gap: 5px; }
+                        #${uniqueId} .lmm-path-presets { flex-grow: 1; }
                         #${uniqueId} .lmm-controls button { cursor: pointer; }
                         #${uniqueId} .lmm-controls button:hover { background-color: #444; }
                         #${uniqueId} .lmm-controls button:disabled { background-color: #222; cursor: not-allowed; }
@@ -92,8 +94,15 @@ app.registerExtension({
                     </style>
                     <div class="lmm-container-wrapper">
                          <div class="lmm-controls">
-                            <button class="lmm-up-button" title="Return to the previous directory" disabled>⬆️ Up</button> <label>Path:</label>
-                            <input type="text" placeholder="Enter full path to media folder"> <button class="lmm-refresh-button">🔄 Refresh</button>
+                            <button class="lmm-up-button" title="Return to the previous directory" disabled>⬆️ Up</button> 
+                            <label>Path:</label>
+                            <div class="lmm-path-controls">
+                                <input type="text" placeholder="Enter full path to media folder">
+                                <select class="lmm-path-presets"></select>
+                                <button class="lmm-add-path-button" title="Add current path to presets">➕</button>
+                                <button class="lmm-remove-path-button" title="Remove selected preset">➖</button>
+                            </div>
+                            <button class="lmm-refresh-button">🔄 Refresh</button>
                         </div>
                         <div class="lmm-controls" style="gap: 5px;">
                             <label>Sort by:</label> <select class="lmm-sort-by"> <option value="name">Name</option> <option value="date">Date</option> <option value="rating">Rating</option> </select>
@@ -120,6 +129,9 @@ app.registerExtension({
                 const cardholder = galleryContainer.querySelector(".lmm-cardholder");
                 const controls = galleryContainer.querySelector(".lmm-container-wrapper");
                 const pathInput = controls.querySelector("input[type='text']");
+                const pathPresets = controls.querySelector(".lmm-path-presets");
+                const addPathButton = controls.querySelector(".lmm-add-path-button");
+                const removePathButton = controls.querySelector(".lmm-remove-path-button");
                 const upButton = controls.querySelector(".lmm-up-button");
                 const showVideosCheckbox = controls.querySelector(".lmm-show-videos");
                 const showAudioCheckbox = controls.querySelector(".lmm-show-audio");
@@ -165,6 +177,15 @@ app.registerExtension({
                             method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload),
                         });
                     } catch(e) { console.error("Failed to update metadata:", e); }
+                }
+
+                async function savePaths() {
+                    const paths = Array.from(pathPresets.options).map(o => o.value);
+                    try {
+                        await api.fetchApi("/local_image_gallery/save_paths", {
+                            method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ paths }),
+                        });
+                    } catch(e) { console.error("Failed to save paths:", e); }
                 }
 
                 function updateCardTagsUI(card) {
@@ -462,6 +483,33 @@ app.registerExtension({
                 showVideosCheckbox.addEventListener('change', resetAndReload);
                 showAudioCheckbox.addEventListener('change', resetAndReload);
                 globalSearchCheckbox.addEventListener('change', resetAndReload);
+
+                addPathButton.addEventListener('click', () => {
+                    const currentPath = pathInput.value.trim();
+                    if (currentPath) {
+                        const exists = Array.from(pathPresets.options).some(o => o.value === currentPath);
+                        if (!exists) {
+                            const option = new Option(currentPath, currentPath);
+                            pathPresets.add(option);
+                            savePaths();
+                        }
+                    }
+                });
+                
+                removePathButton.addEventListener('click', () => {
+                    if (pathPresets.selectedIndex > -1) {
+                        pathPresets.remove(pathPresets.selectedIndex);
+                        savePaths();
+                    }
+                });
+                
+                pathPresets.addEventListener('change', () => {
+                    if (pathPresets.value) {
+                        pathInput.value = pathPresets.value;
+                        resetAndReload();
+                    }
+                });
+
                 upButton.onclick = () => { if(parentDir){ pathInput.value = parentDir; globalSearchCheckbox.checked = false; tagFilterInput.value = ""; resetAndReload(); } };
                 cardholder.onscroll = () => { if (cardholder.scrollTop + cardholder.clientHeight >= cardholder.scrollHeight - 300 && !isLoading && currentPage < totalPages) { fetchImages(currentPage + 1, true); } };
                 
@@ -476,7 +524,24 @@ app.registerExtension({
                     } catch (e) { console.error("Unable to load the last path:", e); }
                 };
                 
+                const loadSavedPaths = async () => {
+                    try {
+                        const response = await api.fetchApi("/local_image_gallery/get_saved_paths");
+                        const data = await response.json();
+                        pathPresets.innerHTML = '<option value="" disabled selected>Select a common path</option>';
+                        if (data.saved_paths) {
+                            data.saved_paths.forEach(p => {
+                                if (p) {
+                                    const option = new Option(p, p);
+                                    pathPresets.add(option);
+                                }
+                            });
+                        }
+                    } catch (e) { console.error("Unable to load saved paths:", e); }
+                };
+
                 loadLastPath();
+                loadSavedPaths();
 
                 this.onResize = function(size) {
                     const minHeight = 670;
