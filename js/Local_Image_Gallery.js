@@ -366,8 +366,10 @@ app.registerExtension({
                         currentSelectedCard = card;
                         renderTagEditor(card);
                         try { 
-                            await fetch("/local_image_gallery/set_image_path", { 
-                                method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ path: path, type: type }), 
+                            await api.fetchApi("/local_image_gallery/set_node_selection", { 
+                                method: "POST", 
+                                headers: { "Content-Type": "application/json" }, 
+                                body: JSON.stringify({ node_id: this.id, path: path, type: type }), 
                             });
                         } catch(e) { console.error("An error occurred while sending data to the backend:", e); }
                     }

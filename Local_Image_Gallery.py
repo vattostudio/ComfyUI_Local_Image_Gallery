@@ -9,9 +9,7 @@ import urllib.parse
 import io
 
 NODE_DIR = os.path.dirname(os.path.abspath(__file__))
-IMAGE_SELECTION_FILE = os.path.join(NODE_DIR, "selected_local_image.json")
-VIDEO_SELECTION_FILE = os.path.join(NODE_DIR, "selected_local_video.json")
-AUDIO_SELECTION_FILE = os.path.join(NODE_DIR, "selected_local_audio.json")
+SELECTIONS_FILE = os.path.join(NODE_DIR, "selections.json")
 CONFIG_FILE = os.path.join(NODE_DIR, "config.json")
 METADATA_FILE = os.path.join(NODE_DIR, "metadata.json")
 SUPPORTED_IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.bmp', '.gif', '.webp']
@@ -41,64 +39,54 @@ def save_metadata(data):
         with open(METADATA_FILE, 'w', encoding='utf-8') as f: json.dump(data, f, indent=4, ensure_ascii=False)
     except Exception as e: print(f"LocalImageGallery: Error saving metadata: {e}")
 
+def load_selections():
+    if not os.path.exists(SELECTIONS_FILE): return {}
+    try:
+        with open(SELECTIONS_FILE, 'r', encoding='utf-8') as f: return json.load(f)
+    except: return {}
+
+def save_selections(data):
+    try:
+        with open(SELECTIONS_FILE, 'w', encoding='utf-8') as f: json.dump(data, f, indent=4, ensure_ascii=False)
+    except Exception as e: print(f"LMM: Error saving selections: {e}")
+
 class LocalImageGalleryNode:
     @classmethod
     def IS_CHANGED(cls, **kwargs):
-        files = [IMAGE_SELECTION_FILE, VIDEO_SELECTION_FILE, AUDIO_SELECTION_FILE, METADATA_FILE]
-        mtimes = [os.path.getmtime(f) for f in files if os.path.exists(f)]
-        return max(mtimes) if mtimes else float("inf")
+        if os.path.exists(SELECTIONS_FILE):
+            return os.path.getmtime(SELECTIONS_FILE)
+        return float("inf")
     
     @classmethod
-    def INPUT_TYPES(cls): return {"required": {}}
+    def INPUT_TYPES(cls):
+        return {
+            "required": {},
+            "hidden": { "unique_id": "UNIQUE_ID" },
+        }
+
     RETURN_TYPES = ("IMAGE", "STRING", "STRING", "STRING",)
     RETURN_NAMES = ("image", "video_path", "audio_path", "info",)
     FUNCTION = "get_selected_media"
     CATEGORY = "📜Asset Gallery/Local"
 
-    def get_selected_media(self):
+    def get_selected_media(self, unique_id):
         image_tensor = torch.zeros(1, 1, 1, 4)
         video_path, audio_path, info_string = "", "", ""
-        if os.path.exists(IMAGE_SELECTION_FILE):
-            try:
-                with open(IMAGE_SELECTION_FILE, 'r', encoding='utf-8') as f:
-                    data = json.load(f)
-                    path = data.get("path")
-                    if path and os.path.exists(path):
-                        img = Image.open(path)
-                        img = img.convert("RGBA") if 'A' in img.getbands() else img.convert("RGB")
-                        img_array = np.array(img).astype(np.float32) / 255.0
-                        image_tensor = torch.from_numpy(img_array)[None,]
-                        if "info" in data: info_string = json.dumps(data["info"], indent=4, ensure_ascii=False)
-            except Exception as e: print(f"LocalImageGallery: Error processing image selection: {e}")
-        if os.path.exists(VIDEO_SELECTION_FILE):
-            try:
-                with open(VIDEO_SELECTION_FILE, 'r', encoding='utf-8') as f:
-                    path = json.load(f).get("path")
-                    if path and os.path.exists(path): video_path = path
-            except Exception as e: print(f"LocalImageGallery: Error processing video selection: {e}")
-        if os.path.exists(AUDIO_SELECTION_FILE):
-            try:
-                with open(AUDIO_SELECTION_FILE, 'r', encoding='utf-8') as f:
-                    path = json.load(f).get("path")
-                    if path and os.path.exists(path): audio_path = path
-            except Exception as e: print(f"LocalImageGallery: Error processing audio selection: {e}")
-        return (image_tensor, video_path, audio_path, info_string,)
 
-prompt_server = server.PromptServer.instance
+        selections = load_selections()
 
-@prompt_server.routes.post("/local_image_gallery/set_image_path")
-async def set_local_image_path(request):
-    try:
-        data = await request.json()
-        path, media_type = data.get("path"), data.get("type", "image")
-        if not path or not os.path.isabs(path) or not os.path.exists(path):
-             return web.json_response({"status": "error", "message": "Invalid path."}, status=400)
-        target_file = None
-        if media_type == 'image':
-            target_file = IMAGE_SELECTION_FILE
+        node_selections = selections.get(str(unique_id), {})
+
+        image_selection = node_selections.get("image")
+        if image_selection and image_selection.get("path") and os.path.exists(image_selection["path"]):
+            media_path = image_selection["path"]
             try:
-                with Image.open(path) as img:
-                    info = {"filename": os.path.basename(path), "width": img.width, "height": img.height, "mode": img.mode, "format": img.format}
+                with Image.open(media_path) as img:
+                    img_out = img.convert("RGBA") if 'A' in img.getbands() else img.convert("RGB")
+                    img_array = np.array(img_out).astype(np.float32) / 255.0
+                    image_tensor = torch.from_numpy(img_array)[None,]
+
+                    full_info = {"filename": os.path.basename(media_path), "width": img.width, "height": img.height, "mode": img.mode, "format": img.format}
                     metadata = {}
                     if 'parameters' in img.info: metadata['parameters'] = img.info['parameters']
                     if 'prompt' in img.info:
@@ -107,20 +95,44 @@ async def set_local_image_path(request):
                     if 'workflow' in img.info:
                         try: metadata['workflow'] = json.loads(img.info['workflow'])
                         except: metadata['workflow'] = img.info['workflow']
-                    for key, value in img.info.items():
-                        if isinstance(value, str) and key not in ['parameters', 'prompt', 'workflow']: metadata[key] = value
-                    if metadata: info['metadata'] = metadata
-                    data['info'] = info
+                    if metadata: full_info['metadata'] = metadata
+                    info_string = json.dumps(full_info, indent=4, ensure_ascii=False)
             except Exception as e:
-                print(f"LocalImageGallery: Could not read image info for {path}: {e}")
-                data['info'] = {"filename": os.path.basename(path)}
-        elif media_type == 'video': target_file = VIDEO_SELECTION_FILE
-        elif media_type == 'audio': target_file = AUDIO_SELECTION_FILE
-        else: return web.json_response({"status": "error", "message": "Invalid media type."}, status=400)
-        with open(target_file, 'w', encoding='utf-8') as f:
-            json.dump(data, f, indent=4, ensure_ascii=False)
+                print(f"LMM: Error processing image: {e}")
+
+        video_selection = node_selections.get("video")
+        if video_selection and video_selection.get("path") and os.path.exists(video_selection["path"]):
+            video_path = video_selection["path"]
+
+        audio_selection = node_selections.get("audio")
+        if audio_selection and audio_selection.get("path") and os.path.exists(audio_selection["path"]):
+            audio_path = audio_selection["path"]
+
+        return (image_tensor, video_path, audio_path, info_string,)
+
+prompt_server = server.PromptServer.instance
+
+@prompt_server.routes.post("/local_image_gallery/set_node_selection")
+async def set_node_selection(request):
+    try:
+        data = await request.json()
+        node_id = str(data.get("node_id"))
+        path = data.get("path")
+        media_type = data.get("type")
+
+        if not all([node_id, path, media_type]):
+            return web.json_response({"status": "error", "message": "Missing required data."}, status=400)
+
+        selections = load_selections()
+        if node_id not in selections:
+            selections[node_id] = {}
+
+        selections[node_id][media_type] = {"path": path}
+        save_selections(selections)
+
         return web.json_response({"status": "ok"})
-    except Exception as e: return web.json_response({"status": "error", "message": str(e)}, status=500)
+    except Exception as e:
+        return web.json_response({"status": "error", "message": str(e)}, status=500)
 
 @prompt_server.routes.post("/local_image_gallery/update_metadata")
 async def update_metadata(request):
