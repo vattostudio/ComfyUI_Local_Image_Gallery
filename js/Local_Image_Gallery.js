@@ -14,6 +14,7 @@ function setupGlobalLightbox() {
                 <video src="" controls autoplay style="display: none;"></video>
                 <audio src="" controls autoplay style="display: none;"></audio>
             </div>
+            <div class="lightbox-dimensions"></div>
         </div>
     `;
     const lightboxCSS = `
@@ -29,6 +30,18 @@ function setupGlobalLightbox() {
         #${lightboxId} .lightbox-prev { left: 15px; }
         #${lightboxId} .lightbox-next { right: 15px; }
         #${lightboxId} [disabled] { display: none; }
+        #${lightboxId} .lightbox-dimensions { 
+            position: absolute; 
+            bottom: 0px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            background-color: rgba(0, 0, 0, 0.7); 
+            color: #fff; 
+            padding: 2px 4px; 
+            border-radius: 5px; 
+            font-size: 14px; 
+            z-index: 10001; 
+        }
     `;
     document.body.insertAdjacentHTML('beforeend', lightboxHTML);
     const styleEl = document.createElement('style');
@@ -114,6 +127,7 @@ app.registerExtension({
                         </div>
                         <div class="lmm-controls" style="gap: 5px;">
                             <label>Filter by Tag:</label> <input type="text" class="lmm-tag-filter-input" placeholder="Enter tag...">
+                            <select class="lmm-tag-filter-presets"></select>
                             <label>Global:</label> <input type="checkbox" class="lmm-global-search">
                         </div>
                         <div class="lmm-controls lmm-tag-editor">
@@ -136,6 +150,7 @@ app.registerExtension({
                 const showVideosCheckbox = controls.querySelector(".lmm-show-videos");
                 const showAudioCheckbox = controls.querySelector(".lmm-show-audio");
                 const tagFilterInput = controls.querySelector(".lmm-tag-filter-input");
+                const tagFilterPresets = controls.querySelector(".lmm-tag-filter-presets");
                 const globalSearchCheckbox = controls.querySelector(".lmm-global-search");
                 const tagEditor = controls.querySelector(".lmm-tag-editor");
                 const tagEditorInput = controls.querySelector(".lmm-tag-editor-input");
@@ -188,6 +203,20 @@ app.registerExtension({
                     } catch(e) { console.error("Failed to save paths:", e); }
                 }
 
+                async function loadAllTags() {
+                    try {
+                        const response = await api.fetchApi("/local_image_gallery/get_all_tags");
+                        const data = await response.json();
+                        tagFilterPresets.innerHTML = '<option value="">Select Tags</option>';
+                        if (data.tags) {
+                            data.tags.forEach(tag => {
+                                const option = new Option(tag, tag);
+                                tagFilterPresets.add(option);
+                            });
+                        }
+                    } catch(e) { console.error("Failed to load all tags:", e); }
+                }                
+
                 function updateCardTagsUI(card) {
                     const tagListEl = card.querySelector('.lmm-tag-list');
                     if (!tagListEl) return;
@@ -218,6 +247,7 @@ app.registerExtension({
                             updateMetadata(card.dataset.path, { tags: newTags });
                             updateCardTagsUI(card);
                             renderTagEditor(card);
+                            loadAllTags();
 
                             const isGlobalSearch = globalSearchCheckbox.checked;
                             const filterTag = tagFilterInput.value.trim();
@@ -411,15 +441,21 @@ app.registerExtension({
                     resetLightboxState();
                     lightbox.style.display = 'flex';
                     
+                    const dimensionsEl = lightbox.querySelector(".lightbox-dimensions");
                     lightboxImg.style.display = 'none';
                     lightboxVideo.style.display = 'none';
                     lightboxAudio.style.display = 'none';
+                    dimensionsEl.style.display = 'none';
                     lightboxVideo.pause();
                     lightboxAudio.pause();
 
                     if (media.type === 'image') {
                         lightboxImg.style.display = 'block';
                         lightboxImg.src = `/local_image_gallery/view?filepath=${encodeURIComponent(media.path)}`;
+                        lightboxImg.onload = () => {
+                            dimensionsEl.textContent = `${lightboxImg.naturalWidth} x ${lightboxImg.naturalHeight}`;
+                            dimensionsEl.style.display = 'block';
+                        };
                     } else if (media.type === 'video') {
                         lightboxVideo.style.display = 'block';
                         lightboxVideo.src = `/local_image_gallery/view?filepath=${encodeURIComponent(media.path)}`;
@@ -474,6 +510,7 @@ app.registerExtension({
                                 renderTagEditor(currentSelectedCard);
                                 updateCardTagsUI(currentSelectedCard);
                                 updateMetadata(currentSelectedCard.dataset.path, { tags });
+                                loadAllTags();
                                 debouncedLayout();
                             }
                             tagEditorInput.value = "";
@@ -512,6 +549,14 @@ app.registerExtension({
                     }
                 });
 
+                tagFilterPresets.addEventListener('change', () => {
+                    if (tagFilterPresets.value) {
+                        tagFilterInput.value = tagFilterPresets.value;
+                        resetAndReload();
+                        tagFilterPresets.value = "";
+                    }
+                });
+
                 upButton.onclick = () => { if(parentDir){ pathInput.value = parentDir; globalSearchCheckbox.checked = false; tagFilterInput.value = ""; resetAndReload(); } };
                 cardholder.onscroll = () => { if (cardholder.scrollTop + cardholder.clientHeight >= cardholder.scrollHeight - 300 && !isLoading && currentPage < totalPages) { fetchImages(currentPage + 1, true); } };
                 
@@ -544,6 +589,7 @@ app.registerExtension({
 
                 loadLastPath();
                 loadSavedPaths();
+                loadAllTags();
 
                 this.onResize = function(size) {
                     const minHeight = 670;

@@ -165,6 +165,22 @@ async def save_paths(request):
     except Exception as e:
         return web.json_response({"status": "error", "message": str(e)}, status=500)
 
+@prompt_server.routes.get("/local_image_gallery/get_all_tags")
+async def get_all_tags(request):
+    try:
+        metadata = load_metadata()
+        all_tags = set()
+        for item_meta in metadata.values():
+            tags = item_meta.get("tags")
+            if isinstance(tags, list):
+                for tag in tags:
+                    all_tags.add(tag)
+        
+        sorted_tags = sorted(list(all_tags), key=lambda s: s.lower())
+        return web.json_response({"tags": sorted_tags})
+    except Exception as e:
+        return web.json_response({"status": "error", "message": str(e)}, status=500)
+
 @prompt_server.routes.get("/local_image_gallery/images")
 async def get_local_images(request):
     directory = request.query.get('directory', '')
